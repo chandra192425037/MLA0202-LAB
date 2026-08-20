@@ -1,0 +1,21 @@
+from sklearn.naive_bayes import GaussianNB
+X = [
+    [20,22,5],
+    [30,25,6],
+    [40,30,8],
+    [50,35,10],
+    [60,40,12],
+    [80,45,15],
+    [100,50,20],
+    [120,55,25]
+]
+y = [0,0,0,1,1,1,1,1]
+model = GaussianNB()
+model.fit(X, y)
+customer = [[70,40,12]]
+prediction = model.predict(customer)
+if prediction[0] == 1:
+    print("Loan Approved")
+else:
+    print("Loan Not Approved")
+print("Chandra 192425037")
